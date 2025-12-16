@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Fraldas Ranny</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game">
+  <img id="baby" src="baby.png" alt="Bebê">
+
+  <!-- MÃO DE INSTRUÇÃO -->
+  <img id="handHint" src="hand.png" alt="Arraste">
+
+  <!-- OBJETOS -->
+  <img id="wipes" class="draggable" src="wipes.png" data-step="0">
+  <img id="diaperClean" class="draggable hidden" src="diaper_clean.png" data-step="1">
+  <img id="bottle" class="draggable hidden" src="bottle.png" data-step="2">
+
+  <audio id="giggle" src="giggle.mp3"></audio>
+
+  <div id="finalScreen">
+    <h1>FRALDAS RANNY</h1>
+    <p>Estrada do Jaguaré, 1706 – São Paulo/SP</p>
+    <button id="cta">Como Chegar</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(71, 13, 28);
+}
+
+#game {
+  position: relative;
+  width: 360px;
+  height: 400px;
+  background: rgb(71, 13, 28);
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  overflow: hidden;
+}
+
+/* BEBÊ */
+#baby {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  width: 300px;
+  z-index: 1;
+}
+
+/* DRAGGABLE */
+.draggable {
+  position: absolute;
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
+
+/* POSIÇÕES INICIAIS */
+#wipes { top: 20px; left: 130px; }
+#diaperClean { top: 20px; left: 130px; }
+#bottle { top: 20px; left: 130px; }
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* MÃO */
+#handHint {
+  position: absolute;
+  width: 60px;
+  left: 150px;
+  top: 70px;
+  pointer-events: none;
+  z-index: 20;
+  animation: hint 1.3s infinite;
+}
+
+#handHint.hidden { display: none; }
+
+@keyframes hint {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(150px); opacity: 1; }
+  100% { transform: translateY(150px); opacity: 0; }
+}
+
+/* FINAL */
+#finalScreen {
+  position: absolute;
+  inset: 0;
+  background: rgb(71, 13, 28);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+#finalScreen h1,
+#finalScreen p {
+  color: #fff;
+  text-align: center;
+}
+
+#cta {
+  margin-top: 15px;
+  padding: 15px 25px;
+  font-size: 18px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+}
