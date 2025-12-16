@@ -51,7 +51,7 @@ body {
   position: absolute;
   width: 60px;
   left: 150px;
-  top: 50px;
+  top: 60px;
   pointer-events: none;
   z-index: 20;
   animation: hint 1.3s infinite;
@@ -61,8 +61,8 @@ body {
 
 @keyframes hint {
   0% { transform: translateY(0); opacity: 1; }
-  70% { transform: translateY(180px); opacity: 1; }
-  100% { transform: translateY(180px); opacity: 0; }
+  70% { transform: translateY(150px); opacity: 1; }
+  100% { transform: translateY(150px); opacity: 0; }
 }
 
 /* FINAL */
@@ -92,6 +92,7 @@ body {
   border: none;
   border-radius: 8px;
 }
+
 
 
 
