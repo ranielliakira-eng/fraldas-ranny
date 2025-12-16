@@ -1,3 +1,5 @@
+const initialPositions = {};
+
 var clickTag = "https://www.google.com/maps/dir/?api=1&destination=Estrada+do+Jaguaré+1706+São+Paulo";
 
 const baby = document.getElementById("baby");
@@ -13,9 +15,16 @@ let offsetY = 0;
 
 /* INICIAR DRAG */
 document.querySelectorAll(".draggable").forEach(el => {
+  // salva posição inicial
+  initialPositions[el.id] = {
+    left: el.offsetLeft,
+    top: el.offsetTop
+  };
+
   el.addEventListener("mousedown", start);
   el.addEventListener("touchstart", start, { passive: false });
 });
+
 
 function start(e) {
   e.preventDefault();
@@ -45,10 +54,11 @@ function move(e) {
 function end() {
   if (!dragged) return;
 
-  if (
+  const correct =
     parseInt(dragged.dataset.step) === step &&
-    checkCollision(dragged, baby)
-  ) {
+    checkCollision(dragged, baby);
+
+  if (correct) {
     dragged.classList.add("hidden");
     giggle.currentTime = 0;
     giggle.play();
@@ -59,6 +69,11 @@ function end() {
     if (step === 3) finalScreen.style.display = "flex";
 
     if (step < 3) handHint.classList.remove("hidden");
+  } else {
+    // ❗ VOLTA PARA POSIÇÃO INICIAL
+    const pos = initialPositions[dragged.id];
+    dragged.style.left = pos.left + "px";
+    dragged.style.top  = pos.top + "px";
   }
 
   document.removeEventListener("mousemove", move);
