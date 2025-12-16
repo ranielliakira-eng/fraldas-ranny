@@ -51,7 +51,7 @@ body {
   position: absolute;
   width: 60px;
   left: 150px;
-  top: 40px;
+  top: 50px;
   pointer-events: none;
   z-index: 20;
   animation: hint 1.3s infinite;
@@ -92,6 +92,7 @@ body {
   border: none;
   border-radius: 8px;
 }
+
 
 
 
