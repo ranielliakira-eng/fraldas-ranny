@@ -21,8 +21,8 @@ body {
 /* BEBÊ */
 #baby {
   position: absolute;
-  bottom: 50px;
-  left: 30px;
+  bottom: 40px;
+  left: 10px;
   width: 300px;
   z-index: 1;
 }
@@ -30,16 +30,16 @@ body {
 /* DRAGGABLE */
 .draggable {
   position: absolute;
-  width: 100px;
+  width: 120px;
   cursor: pointer;
   user-select: none;
   z-index: 10;
 }
 
 /* POSIÇÕES INICIAIS */
-#wipes { top: 20px; left: 130px; }
-#diaperClean { top: 20px; left: 130px; }
-#bottle { top: 20px; left: 130px; }
+#wipes { top: 20px; left: 110px; }
+#diaperClean { top: 20px; left: 110px; }
+#bottle { top: 20px; left: 110px; }
 
 .hidden {
   opacity: 0;
@@ -92,3 +92,4 @@ body {
   border: none;
   border-radius: 8px;
 }
+
