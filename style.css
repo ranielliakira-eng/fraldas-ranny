@@ -21,7 +21,7 @@ body {
 /* BEBÊ */
 #baby {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 10px;
   width: 300px;
   z-index: 1;
@@ -92,4 +92,5 @@ body {
   border: none;
   border-radius: 8px;
 }
+
 
