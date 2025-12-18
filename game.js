@@ -167,7 +167,7 @@
         if (cliente.status === "ESPERANDO") {
             const fx = cliente.x - 50, fy = cliente.y +30;
             ctx.fillStyle = "white"; ctx.beginPath(); ctx.roundRect(fx, fy, 200, 30, 10); ctx.fill();
-            ctx.fillStyle = "black"; ctx.font = "bold 14px Arial"; ctx.fillText("Olá, quero fraldas, por favor!", fx + 10, fy + 20);
+            ctx.fillStyle = "black"; ctx.font = "bold 14px Arial"; ctx.fillText("Olá, quero fraldas, por favor!", fx + 5, fy + 20);
 
             anguloMao += 0.1; let flutuar = Math.sin(anguloMao) * 10;
             if (imgMao.complete) {
@@ -184,3 +184,4 @@
 </script>
 </body>
 </html>
+
